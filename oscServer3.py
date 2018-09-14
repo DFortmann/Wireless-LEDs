@@ -177,7 +177,7 @@ def recSampleRate(addr, tags, stuff, source):
 s = OSC.OSCServer(("",7000))
 
 s.addDefaultHandlers()
-s.addMsgHandler('default', recSampleRate) #handels all not handled OSC messages
+s.addMsgHandler('default', recSampleRate) #all not explicitly handled OSC messages
 s.addMsgHandler('/_samplerate', recSampleRate)
 s.addMsgHandler('/leds/fone', recFoneIndex)
 s.addMsgHandler('/leds/ftwo', recFtwoIndex)
